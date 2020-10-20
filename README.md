@@ -4,9 +4,9 @@ You can use the [editor on GitHub](https://github.com/danma9023/danma.github.io/
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+## Getting Started
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+The purpose of this document is to illustrate some of the main working flows as well as the key self-designed python libraries used for the Average Price Table (APT) project. This project aims to derive and publish the average price of the grocery goods for statistical inference and other purposes. The outcome of this project can be found [here](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1810000201). In short, this project envolves the collection of the grocery purchase data and classification of these records for the final average price calculation. The focus of this document will be the classification flow of APT and the main python libraries used in this process. 
 
 ```markdown
 Syntax highlighted code block
