@@ -8,10 +8,22 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 The purpose of this document is to illustrate some of the main working flows as well as the key self-designed python libraries used for the Average Price Table (APT) project. This project aims to derive and publish the average price of the grocery goods for statistical inference and other purposes. The outcome of this project can be found [here](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1810000201). In short, this project envolves the collection of the grocery purchase data and classification of these records for the final average price calculation. The focus of this document will be the classification flow of APT and the main python libraries used in this process. 
 
+## Working Flow
+## General Introduction
+The goal of the classification task is to classify the grocery records into the right Elementary Aggregate (EA), where the EA is APT labels here. The main model used for classification is [Support Vector Machine](https://en.wikipedia.org/wiki/Support_vector_machine). This model has been tested and proved to be the optimal model for the classification task with excellent performance. For example, the job could be classify the product "Women's Skirt with Rose Pattern" into "Women's bottom" category. This project runs monthly with collected data from the retailers every month. More details about the working process of this task is shown below:
+
+## 1.Data 
+The data are mainly monthly scanner data from several of the main retailer in Canada. The data is at the product level. Scanner data includes retail purchase information (such as price, brand, product size, amount purchased) gathered at the point of purchase by an electronic device that reads a coded ticket on the product through the use of an electronic reader over which the product passes. The text information of the products are the key features used for the classification. These features include product description, product category, product name and different level of desctiptions (e.g. 1_DESC_EN, LVL2_ENG_DESC). The product category is the targe tfeature that one tries to classifies into. 
+
+## 2. Data Processing
+
+
 ```markdown
 Syntax highlighted code block
 
-# Header 1
+
+
+The data used for APT classification 
 ## Header 2
 ### Header 3
 
