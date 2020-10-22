@@ -19,8 +19,14 @@ The data are mainly monthly scanner data from several of the main retailer in Ca
 This steps envolves cleaning and processing the text features. The main work done in this step is:
 1. Eliminate irrevelant text, such as stop_words and non-alphabetic signs. Specificially, this is achieved through the `data_cleaning` function nested in the `classification_utils` library. 
 2. `sklearn.feature_extraction.text.TfidfVectorizer()` then is used for text feature transformation into numerical features that can be used for SVM model classification.
+3. Just like usual model training process, the data has been splited into training and test set for model fiting. The train set is inserted into the model for optimal hyperparameter search. This is realized through the function `do_hyerparameter_search` from `notebook_utilities`. Then the test set is used for the evluation of the model. Several main evaluation metrics are included here, such as the weighted F1-score and macro F1-score for each class and each retailer. Then if the evaluation metric shows a good sign of the model performance, this trained model will be used for prediction of the unclassified records.  
 
-```markdown
+Next, this document will go through the function/libraries used in all steps in details. 
+
+## 3.Libarary Reference
+### `general_utils`: general functions 
+
+
 Syntax highlighted code block
 
 
